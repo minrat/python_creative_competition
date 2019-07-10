@@ -70,9 +70,12 @@ def main_pre():
 
 
 if __name__ == '__main__':
-    #main_pre()
-    #  main(10)
+    # main_pre()
+    # 传统循环实现
+    for i in range(0, 100, 10):
+        main(i)
 
+    # 多线程实现
     pool = Pool()
     pool.map(main, [i*10 for i in range(10)])
 
